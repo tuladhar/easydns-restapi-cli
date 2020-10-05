@@ -28,7 +28,9 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Get dependencies
-        run: pip3 install requests pyinstaller
+        run: |
+          pip install -U pip setuptools
+          pip install requests pyinstaller
 
       - name: Generate binary
         run: pyinstaller --onefile easydns-restapi-cli -n easydnscli-${{matrix.TARGET}}

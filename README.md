@@ -12,8 +12,8 @@ A command-line tool for managing (create/update) EasyDNS DNS records using easyD
 
 ### INSTALLATION
 ```
-$ git clone https://github.com/tuladhar/easydns-restapi-cli
-$ cd easydns-restapi-cli && install.sh
+$ git clone https://github.com/tuladhar/easydns-restapi-cli && cd easydns-restapi-cli
+$ sudo make install
 $ easydnscli: installed
 $ easydnscli --help
 

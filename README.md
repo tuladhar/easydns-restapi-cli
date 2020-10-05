@@ -2,28 +2,19 @@
 
 A command-line tool for managing (create/update) EasyDNS DNS records using easyDNS rest API.
 
-```
-❯❯❯ python easydns-restapi-cli.py --help                   
-Usage: easydns-restapi-cli.py [options]
+![Sample Screenshot](./docs/example.png)
 
-Options:
-  --version             show program's version number and exit
-  -h, --help            show this help message and exit
-  -f CONF, --file=CONF  configuration file containing easyDNS API details
-  -c, --create          create new record
-  -u, --update          update existing record to new IP address
-  -H HOSTNAME, --hostname=HOSTNAME
-                        specify short hostname without domain name part. e.g:
-                        www for www.example.com
-  -a IPADDR, --address=IPADDR
-                        specify IP address for the hostname
-```
+### Requirements
+
+- [git](https://git-scm.com/downloads) 
+- [Python 3](https://www.python.org/downloads/)
 
 ### INSTALLATION
 ```
-❯❯❯ pip install requests
-❯❯❯ curl -sO https://github.com/tuladhar/easydns-restapi-cli/blob/master/easydns-restapi-cli.py
-❯❯❯ install -m 755 easydns-restapi-cli.py /usr/local/bin
+$ git clone https://github.com/tuladhar/easydns-restapi-cli
+$ cd easydns-restapi-cli && install.sh
+$ easydnscli --help
+
 ```
 
 ### CONFIGURATION
@@ -48,15 +39,28 @@ Options:
 
 ### USAGE
 
-Create DNS record
+Create DNS record (Syntax)
+
 ```
-❯❯❯ easydns-restapi-cli.py --conf sample-easydns.conf --create --hostname www --address 127.0.0.1
+$ easydnscli --conf "PATH TO CONFIG FILE" --create --hostname www --address 127.0.0.1
+```
+Create DNS record (Example)
+
+```
+$ easydnscli --conf Downloads/sample-easydns.conf --create --hostname www --address 127.0.0.1
 ```
 
-Update DNS record
+Update DNS record (Syntax)
+
 ```
-❯❯❯ easydns-restapi-cli.py --conf sample-easydns.conf --update --hostname www --address 127.0.0.2
+$ easydnscli --conf "PATH TO CONFIG FILE" --update --hostname www --address 127.0.0.1
+```
+Update DNS record (Example)
+
+```
+$ easydnscli --conf Downloads/sample-easydns.conf --update --hostname www --address 127.0.0.1
 ```
 
 ### AUTHORS
 - [Puru Tuladhar](github.com/tuladhar)
+- [Solai Raj](gitub.com/RajSolai)

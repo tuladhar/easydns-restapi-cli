@@ -44,12 +44,12 @@ def delay(_seconds):
 	sleep(_seconds)
 
 def info(msg):
-	print "[INFO] [%s] %s" % (now(), msg)
+	print ("[INFO] [%s] %s" % (now(), msg))
 
 def error(msg, die=False):
 	_red = "\033[31m"
 	_reset = "\033[00m"
-	print "{red}[ERR!] [{date}] {msg}{reset}".format(red=_red, date=now(), msg=msg, reset=_reset)
+	print ("{red}[ERR!] [{date}] {msg}{reset}".format(red=_red, date=now(), msg=msg, reset=_reset))
 	if die:
 		exit(1)
 
@@ -213,7 +213,7 @@ def main():
 
 	try:
 		EASYDNS_CONF = json.load(open(option.conf, 'r'))
-	except Exception, loadex:
+	except Exception as loadex:
 		parser.error(loadex)
 
 	if option.create and option.update:
@@ -251,7 +251,7 @@ def main():
 			if octet < 0 or octet > 255:
 				parser.error(_invalid_address)
 
-	print "Press Ctrl-C to quit"
+	print ("Press Ctrl-C to quit")
 	info("script started (delay set to %s seconds)" % (EASYDNS_CONF.get('delay')))
 	atexit.register(_atexit, time())
 

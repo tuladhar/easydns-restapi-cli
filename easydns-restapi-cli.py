@@ -32,7 +32,7 @@ import json
 import re
 
 __VERSION__ = '1.0'
-__AUTHOR__  = 'Puru Tuladhar <tuladharpuru@gmail.com>'
+__AUTHOR__  = 'Puru Tuladhar <ptuladhar3@gmail.com>'
 
 EASYDNS_CONF = {}
 

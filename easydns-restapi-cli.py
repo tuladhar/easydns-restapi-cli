@@ -181,8 +181,8 @@ def easydns_update_record(hostname, address):
 
 def main():
 	global EASYDNS_CONF
-
-	parser = OptionParser(version="%%prog v%s written by %s" % (__VERSION__, __AUTHOR__))
+	message = "A command-line tool for managing (create/update) EasyDNS DNS records using easyDNS rest API."
+	parser = OptionParser(usage=message,version="%%prog v%s written by %s" % (__VERSION__, __AUTHOR__))
 	
 	parser.add_option('-f', '--file', dest="conf",
 		help='configuration file containing easyDNS API details',

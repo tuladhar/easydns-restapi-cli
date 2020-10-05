@@ -23,7 +23,7 @@ $ easydnscli --help
 $ git clone https://github.com/tuladhar/easydns-restapi-cli
 $ cd easydns-restapi-cli
 $ pip3 install requests pyinstaller
-$ pyinstaller --onefile easydns-restapi-cli -n easydnscli
+$ pyinstaller --onefile easydns-restapi-cli.py -n easydnscli
 $ cd dist && ./easydnscli --help
 
 ```

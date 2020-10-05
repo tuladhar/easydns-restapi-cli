@@ -46,5 +46,6 @@ jobs:
         with:
           files: |
             ./dist/easydnscli-${{matrix.TARGET}}
+            ./dist/easydnscli-${{matrix.TARGET}}.exe
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

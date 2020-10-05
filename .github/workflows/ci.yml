@@ -27,15 +27,15 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Get dependencies
-        if: matrix.os == 'windows-latest'
-        run: pip install requests pyinstaller
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.8
 
-      - name: Get dependencies
-        if: matrix.os != 'windows-latest'
+      - name: Install dependencies
         run: |
-          pip3 install -U setuptools
-          pip3 install requests pyinstaller
+          python -m pip install --upgrade pip
+          pip install requests pyinstaller
 
       - name: Generate binary
         run: pyinstaller --onefile easydns-restapi-cli.py -n easydnscli-${{matrix.TARGET}}

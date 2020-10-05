@@ -8,11 +8,13 @@ A command-line tool for managing (create/update) EasyDNS DNS records using easyD
 
 - [git](https://git-scm.com/downloads) 
 - [Python 3](https://www.python.org/downloads/)
+- [EasyDNS API](https://docs.sandbox.rest.easydns.net/)
 
 ### INSTALLATION
 ```
 $ git clone https://github.com/tuladhar/easydns-restapi-cli
 $ cd easydns-restapi-cli && install.sh
+$ easydnscli: installed
 $ easydnscli --help
 
 ```

@@ -31,7 +31,7 @@ import atexit
 import json
 import re
 
-__VERSION__ = '1.2'
+__VERSION__ = '1.2.1'
 __AUTHOR__  = 'Puru Tuladhar <ptuladhar3@gmail.com>'
 
 EASYDNS_CONF = {}

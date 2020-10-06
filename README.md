@@ -74,4 +74,6 @@ $ easydnscli --conf Downloads/sample-easydns.conf --update --hostname www --addr
 
 ### AUTHORS
 - [Puru Tuladhar](github.com/tuladhar)
-- [Solai Raj](gitub.com/RajSolai)
+
+### CONTRIBUTORS
+- See [Contributors.md](Contributors.md)
